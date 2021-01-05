@@ -7,6 +7,13 @@ Dark green: #28b485
 
 */
 
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+
+$color-grey-dark: #777;
+$color-white: #fff;
+
 *,
 *::after,
 *::before {
@@ -24,14 +31,18 @@ body {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.7;
-  color: #777;
+  color: $color-grey-dark;
   padding: 3rem;
   box-sizing: border-box;
 }
 
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right bottom, #7ed56fbb, #28b485bb),
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
     url(../img/hero.jpg);
   background-size: cover;
   background-position: top;
@@ -58,7 +69,7 @@ body {
 }
 
 .heading-primary {
-  color: #fff;
+  color: $color-white;
   text-transform: uppercase;
   margin-bottom: 6rem;
 }
@@ -142,8 +153,8 @@ body {
 }
 
 .btn--white {
-  color: #777;
-  background-color: #fff;
+  color: $color-grey-dark;
+  background-color: $color-white;
 }
 
 .btn::after {
