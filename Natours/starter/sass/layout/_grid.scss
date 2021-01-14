@@ -8,11 +8,22 @@
 
   @include clearfix;
 
+  @include respond(tablet-portrait) {
+    margin-bottom: $gutter-vertical-small;
+    max-width: 50rem;
+    padding: 0 3rem;
+  }
+
   [class^="col-"] {
     float: left;
 
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
+    }
+
+    @include respond(tablet-portrait) {
+      width: 100% !important;
+      margin-bottom: $gutter-vertical-small;
     }
   }
 
