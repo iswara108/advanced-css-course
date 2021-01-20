@@ -237,6 +237,12 @@
       font-size: 1.8rem;
       padding: 1.25rem 2rem;
     }
+
+    @media (max-width: $bp-smallest) {
+      flex: 0 1 auto;
+      width: min-content;
+      padding-right: 0.3rem;
+    }
   }
 
   &__location {
@@ -255,6 +261,12 @@
     fill: currentColor;
     line-height: 1rem;
     font-size: 0;
+
+    @media (max-width: $bp-smallest) {
+      &:not(:last-child) {
+        margin-right: -0.2rem;
+      }
+    }
   }
 
   &__rating {
