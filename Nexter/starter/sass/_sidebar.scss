@@ -5,11 +5,18 @@
 
   display: flex;
   justify-content: center;
+
+  @media only screen and (max-width: $bp-large) {
+    grid-area: 1 / 1 / 2 / -1;
+    justify-content: flex-end;
+    align-items: center;
+  }
 }
 
 .nav-btn {
   border: none;
-  // border-radius: 0;
+  border-radius: 0;
+  margin-top: 4rem;
 
   background-color: #fff;
   height: 2px;
@@ -21,7 +28,7 @@
     display: block;
     background-color: #fff;
     height: 2px;
-    width: 4.5rem;
+    width: 100%;
   }
 
   &::before {
@@ -30,5 +37,19 @@
 
   &::after {
     transform: translateY(1.3rem);
+  }
+
+  @media only screen and (max-width: $bp-large) {
+    margin-top: 0;
+    margin-right: 3rem;
+    width: 3.5rem;
+
+    &::before {
+      transform: translateY(-1.2rem);
+    }
+
+    &::after {
+      transform: translateY(1rem);
+    }
   }
 }
